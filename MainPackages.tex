@@ -1,0 +1,129 @@
+% -------- Packages --------
+
+% The graphicx package adds the \includegraphics command,
+%  which is your basic command for adding a picture.
+\usepackage{graphicx}
+
+% This command is provided by the graphicx package, and 
+%  controls the default dpi resolution of images you use.
+%  72 is the default, but 300 is more normal, and 600 is
+%  as good as you can expect to be able to get on normal paper.
+\pdfimageresolution=300
+
+
+% The float package improves LaTeX's handling of floats,
+%  and also adds the option to *force* LaTeX to put the float
+%  HERE, with the [H] option to the float environment.
+\usepackage{float}
+
+% The amsmath package enhances the various ways of including
+%  maths, including adding the align environment for aligned
+%  equations.
+\usepackage{amsmath}
+
+% Use these two packages together -- they define symbols
+%  for e.g. units that you can use in both text and math mode.
+\usepackage{gensymb}
+\usepackage{textcomp}
+% You may also want the units package for making little
+%  fractions for unit specifications.
+%\usepackage{units}
+
+
+% The setspace package lets you use 1.5-sized or double line spacing.
+\usepackage{setspace}
+\setstretch{1.5}
+
+% That just does body text -- if you want to expand *everything*,
+%  including footnotes and tables, use this instead:
+%\renewcommand{\baselinestretch}{1.5}
+
+
+% PGFPlots is either a really clunky or really good way to add graphs
+%  into your document, depending on your point of view.
+% There's waaaaay too much information on using this to cover here,
+%  so, you might want to start here:
+%   http://pgfplots.sourceforge.net/
+%  or here:
+%   http://pgfplots.sourceforge.net/pgfplots.pdf
+%\usepackage{pgfplots}
+%\pgfplotsset{compat=1.3} % <- this fixed axis labels in the version I was using
+
+% PGFPlotsTable can help you make tables a little more easily than
+%  usual in LaTeX.
+% If you're going to have to paste data in a lot, I'd suggest using it.
+%  You might want to start with the manual, here:
+%  http://pgfplots.sourceforge.net/pgfplotstable.pdf
+%\usepackage{pgfplotstable}
+
+% These settings are also recommended for using with pgfplotstable.
+%\pgfplotstableset{
+%	% these columns/<colname>/.style={<options>} things define a style
+%	% which applies to <colname> only.
+%	empty cells with={--}, % replace empty cells with '--'
+%	every head row/.style={before row=\toprule,after row=\midrule},
+%	every last row/.style={after row=\bottomrule}
+%}
+
+
+% The mhchem package provides chemistry formula typesetting commands
+%  e.g. \ce{H2O}
+%\usepackage[version=3]{mhchem}
+
+% And the chemfig package gives a weird command for adding Lewis 
+%  diagrams, for e.g. organic molecules
+%\usepackage{chemfig}
+
+% The linenumbers command from the lineno package adds line numbers
+%  alongside your text that can be useful for discussing edits 
+%  in drafts.
+% Remove or comment out the command for proper versions.
+%\usepackage[modulo]{lineno}
+% \linenumbers 
+
+
+% Alternatively, you can use the ifdraft package to let you add
+%  commands that will only be used in draft versions
+%\usepackage{ifdraft}
+
+% For example, the following adds a watermark if the draft mode is on.
+%\ifdraft{
+%  \usepackage{draftwatermark}
+%  \SetWatermarkText{\shortstack{\textsc{Draft Mode}\\ \strut \\ \strut \\ \strut}}
+%  \SetWatermarkScale{0.5}
+%  \SetWatermarkAngle{90}
+%}
+
+
+% The multirow package adds the option to make cells span 
+%  rows in tables.
+\usepackage{multirow}
+
+
+% Subfig allows you to create figures within figures, to, for example,
+%  make a single figure with 4 individually labeled and referenceable
+%  sub-figures.
+% It's quite fiddly to use, so check the documentation.
+%\usepackage{subfig}
+
+% The bibentry package (along with the \nobibliography* command)
+%  allows putting full reference lines inline.
+%  See: 
+%   http://tex.stackexchange.com/questions/2905/how-can-i-list-references-from-bibtex-file-in-line-with-commentary
+\usepackage{bibentry} 
+
+% The isorot package allows you to put things sideways 
+%  (or indeed, at any angle) on a page.
+% This can be useful for wide graphs or other figures.
+%\usepackage{isorot}
+
+% The caption package adds more options for caption formatting.
+% This set-up makes hanging labels, makes the caption text smaller
+%  than the body text, and makes the label bold.
+% Highly recommended.
+\usepackage[format=hang,font=small,labelfont=bf]{caption}
+
+% If you're getting into defining your own commands, you might want
+%  to check out the etoolbox package -- it defines a few commands
+%  that can make it easier to make commands robust.
+\usepackage{etoolbox}

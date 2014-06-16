@@ -202,17 +202,24 @@
         \clearpage%
     \fi%
 }
+\def\department#1{\gdef\@department{#1}}
+\def\@department{\@latex@warning@no@line{No \noexpand\department given}}
+\def\thesissubject#1{\gdef\@thesissubject{#1}}
+\def\@thesissubject{\@latex@warning@no@line{No \noexpand\thesissubject given}}
+\def\thesiskeywords#1{\gdef\@thesiskeywords{#1}}
+\def\@thesiskeywords{\@latex@warning@no@line{No \noexpand\thesiskeywords given}}
 \renewcommand \maketitle{%
     \setcounter{page}{1}%
     \thispagestyle{empty}%
     \@maketitle%
     \setcounter{footnote}{0}%
     \let \thanks = \relax%
-    \gdef \@address{}%
-    \gdef \@thanks{}%
-    \gdef \@author{}%
-    \gdef \@title{}%
-    \gdef \@dept{}%
+    % I don't really get why the class wipes these variables after use, and I want them, so commenting out wiping.
+    %\gdef \@address{}%
+    %\gdef \@thanks{}%
+    %\gdef \@author{}%
+    %\gdef \@department{}%
+    %\gdef \@title{}%
     \let \maketitle = \relax%
 }
 \newcommand \@maketitle{%
@@ -233,11 +240,20 @@
     \end{center}%
     \vspace{2em}%
     \begin{center}%
-    @dept \\
+    \@department \\
     University College London\\
       \@date%
     \end{center}%
+    \clearpage%
 }
+\newcommand \makedeclaration {%
+    \newpage
+        I, \@author , confirm that the work presented in this thesis is my own. 
+        Where information has been derived from other sources, I confirm that this has been indicated in the work.
+    \clearpage%
+}    
+
+
 \renewcommand \chapter{%
     \if@openright%
 %        \cleardoublepage%
@@ -313,6 +329,21 @@
     \@mkboth{\@acknowledgements}{\@acknowledgements}%
 }{%
 }
+
+\RequirePackage[pdftex,
+ hidelinks]{hyperref}
+\makeatletter
+\AtBeginDocument{
+    \hypersetup{
+        pdfsubject={\@thesissubject},
+        pdfkeywords={\@thesiskeywords},
+        pdfauthor={\@author},
+        pdftitle={\@title},
+    }
+}
+\makeatother
+    
+
 \endinput
 %%
 %% End of file `ucl_thesis.cls'.

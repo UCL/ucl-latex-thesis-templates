@@ -16,8 +16,8 @@
 %%   the Research Computing team at ISD.
 %%  (i.kirker@ucl.ac.uk)
 %%
-\def \fileversion{v1.4}
-\def \filedate{1996/07/20}
+\def \fileversion{v1.5}
+\def \filedate{2014/06/17}
 \def \docdate{\filedate}
 \newcommand \@doctor{Doctor of Philosophy}
 \newcommand \@master{Master of Philosophy}

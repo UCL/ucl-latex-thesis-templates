@@ -1,6 +1,9 @@
-language: latex
+language: c
+
 install:
-  - sudo apt-get install texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra texlive-bibtex-extra
+  - mkdir -p /tmp/texlive && cd /tmp/texlive && wget https://gist.github.com/urdh/ca8ffcf7cb7c6eace9ad/raw/57718dd299f2e0cd4a2966c17222330624ec9383/texlive.profile
+  - wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz && tar -xvf install-tl-unx.tar.gz && cd install-tl-* && sudo ./install-tl --profile=../texlive.profile
+  - cd $TRAVIS_BUILD_DIR && export PATH=/usr/local/texlive/CURRENT/bin/x86_64-linux:$PATH
 
 script:
-  - lualatex Main.tex
+  - lualatex --halt-on-error Main.tex

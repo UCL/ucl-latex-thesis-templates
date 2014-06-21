@@ -1,0 +1,6 @@
+language: latex
+install:
+  - sudo apt-get install texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra texlive-bibtex-extra
+
+script:
+  - lualatex Main.tex

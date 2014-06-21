@@ -1,5 +1,7 @@
 # UCL LaTeX Thesis Templates
 
+[![Build Status](https://travis-ci.org/UCL/ucl-latex-thesis-templates.svg?branch=master)](https://travis-ci.org/UCL/ucl-latex-thesis-templates)
+
 This is a skeletal thesis template with a class and .sty file that you can use separately if you'd prefer.
 
 The class needs some updating and could use a lot of commenting, and these are being worked on, but the files are perfectly usable right now with pdfLaTeX or lualatex. The repo is tested after each push with lualatex on Travis.

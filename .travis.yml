@@ -6,4 +6,4 @@ install:
   - cd $TRAVIS_BUILD_DIR && export PATH=/usr/local/texlive/CURRENT/bin/x86_64-linux:$PATH
 
 script:
-  - lualatex --halt-on-error Main.tex
+  - lualatex --halt-on-error Main.tex && lualatex --halt-on-error Main.tex && lualatex --halt-on-error Main.tex

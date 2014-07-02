@@ -83,12 +83,14 @@
 
 \begin{document}
 
+
+
+\nobibliography*
 % This is a dumb trick that works with the bibentry package to let
 %  you put bibliography entries whereever you like.
 % I used this to put references to papers a chapter's work was 
 %  published in at the end of that chapter.
 % For more information, see: http://stefaanlippens.net/bibentry
-\nobibliography*
 
 % If you haven't finished making your full BibTex file yet, you
 %  might find this useful -- it'll just replace all your
@@ -98,7 +100,6 @@
 
 % At last, content! Remember filenames are case-sensitive and 
 %  *should not* include spaces.
-
 \include{Preamble}
 \include{Introduction}
 \include{Chapter2}
@@ -115,7 +116,7 @@
 \addcontentsline{toc}{chapter}{Bibliography}
 
 % Actually generates your bibliography.
-\bibliography{MyBibtexFile}
+\bibliography{example.bib}
 
 % All done. \o/
 \end{document}

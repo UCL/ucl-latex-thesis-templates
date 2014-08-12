@@ -442,6 +442,11 @@
     \begin{center}%
     \@date%
     \end{center}%
+    \if@twoside %
+      \newpage%
+      ~\\
+      \newpage%
+    \fi
 }
 %    \end{macrocode}
 %  \end{macro}

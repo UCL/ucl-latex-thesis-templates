@@ -1,5 +1,6 @@
 # UCL LaTeX Thesis Templates
 
+_Unfortunately I've had to disable tests while I try to work out a way to get a TeX installation with all the necessary packages onto the testing image without it taking forever. Please ignore the test image for now:_
 [![Build Status](https://travis-ci.org/UCL/ucl-latex-thesis-templates.svg?branch=master)](https://travis-ci.org/UCL/ucl-latex-thesis-templates)
 
 This is a skeletal thesis template with a class and .sty file that you can use separately if you'd prefer.

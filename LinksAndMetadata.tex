@@ -1,0 +1,23 @@
+%%
+%% This file uses the hyperref package to make your thesis have metadata embedded in the PDF, 
+%%  and also adds links to be able to click on references and contents page entries to go to 
+%%  the pages.
+%%
+
+% Some hacks are necessary to make bibentry and hyperref play nicely.
+% See: http://tex.stackexchange.com/questions/65348/clash-between-bibentry-and-hyperref-with-bibstyle-elsart-harv
+\usepackage{bibentry}
+\makeatletter\let\saved@bibitem\@bibitem\makeatother
+\usepackage[pdftex,hidelinks]{hyperref}
+\makeatletter\let\@bibitem\saved@bibitem\makeatother
+\makeatletter
+\AtBeginDocument{
+    \hypersetup{
+        pdfsubject={Thesis Subject},
+        pdfkeywords={Thesis Keywords},
+        pdfauthor={Author},
+        pdftitle={Title},
+    }
+}
+\makeatother
+    

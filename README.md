@@ -10,3 +10,19 @@ The class needs some updating and could use a lot of commenting, and these are b
 If you have suggestions for improvements, please do submit an issue, drop me a line, or throw me a pull request.
 
 *@ikirker*
+
+## Known Issues
+
+#### Citation Links
+If you see this error while compiling:
+
+```
+pdfTeX warning (dest): name{cite.whatever} has been referenced but does not exist, replaced by a fixed one
+```
+
+and then get links that don't work in the PDF, try un-commenting the line below in `MainPackages.tex` even if you don't use that style of citation.
+
+```latex
+\usepackage{natbib}
+```
+

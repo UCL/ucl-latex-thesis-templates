@@ -151,7 +151,6 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
 \LoadClass{book}
-\RequirePackage{ucl_a4}
 \RequirePackage{times}
 \RequirePackage{mathptmx}
 %    \end{macrocode}
@@ -170,14 +169,17 @@
 %      not less than 20 mm (.75 inches)." 
 %
 %    \begin{macrocode}
-\setlength \textwidth {415\p@}
-\setlength \textheight {692\p@}
-\setlength \topmargin {36\p@}
-\setlength \oddsidemargin {96\p@}
+
+\setlength \hoffset{-25.4mm}
+\setlength \voffset{-25.4mm}
+\setlength \textwidth{140mm}
+\setlength \textheight{232mm} % I think you need some extra vertical space for headers and page numbers
+\setlength \topmargin{20mm}
+\setlength \oddsidemargin {39mm} % Allow a mm for the bleed.
 \if@twoside
-    \setlength \evensidemargin {60\p@}
+  \setlength \evensidemargin {20mm}
 \else
-    \setlength \evensidemargin {96\p@}
+  \setlength \evensidemargin {39mm}
 \fi
 %    \end{macrocode}
 %  \begin{macro}{\ps@headings}

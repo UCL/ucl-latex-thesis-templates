@@ -8,4 +8,4 @@ install:
    - sudo apt-get install -y texlive-fonts-recommended texlive-fonts-extra
    - sudo apt-get install -y psutils
 script:
-   - make
+   - make test

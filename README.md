@@ -4,6 +4,8 @@
 
 This is a skeletal thesis template with a class and .sty file that you can use separately if you'd prefer.
 
+To change the thesis type from PhD to MRes or MPhil, look for the setting in `Main.tex`.
+
 The class needs some updating and could use a lot of commenting, and these are being worked on, but the files are perfectly usable right now with pdfLaTeX or lualatex. The repo is tested after each push with lualatex on Travis.
 
 If you have suggestions for improvements, please do submit an issue, drop me a line ([i.kirker+GH@ucl.ac.uk](mailto:i.kirker+GH@ucl.ac.uk)), or throw me a pull request.
@@ -47,4 +49,6 @@ PNG and JPEG images work perfectly well, as do PDF files (including vector graph
 
 In the `Main.tex` file there are a list of `\include` statements. If you add an `\includeonly` statement to match those with one or more of the same labels, it'll just produce the content for those sections. (Labels, references, figures, and table numbers will be consistent as if you'd generated the whole document.)
 
+#### Didn't there used to be different files for PhD, MRes, and MPhil dissertations?
 
+Yes, but they only differed by 4 characters each, so it seemed silly to maintain them each separately. Change the setting in the `Main.tex` file to get the one you need.

@@ -24,3 +24,27 @@ and then get links that don't work in the PDF, try un-commenting the line below 
 ```latex
 \usepackage{natbib}
 ```
+
+## FAQ
+
+#### What should I use for editing .tex files?
+
+If you're already comfortable with programming on the command-line, you can use whatever plain text editor you'd like.
+
+If you're new to LaTeX, though, or want something to help you keep your files together, you may want TeXMaker or LyX (both available for Windows, Linux, or OS X), or TeXShop (for OS X).
+
+TeXShop and TeXMaker are both oriented around helping you write plaintext .tex files, while LyX is more aimed at presenting a structured document with some of the formatting rendered, to make it a little less abstract to work with.
+
+#### What is the Makefile for?
+
+If you're using this from the Linux command-line, the Makefile defines a few things to make it easier to build the LaTeX document. If not, you can happily ignore it.
+
+#### What graphics formats are good to include with this?
+
+PNG and JPEG images work perfectly well, as do PDF files (including vector graphics). Vector graphics in PDFs will remain as vectors. Remember to produce higher-resolution images than you'd use online -- 300 or 600 dpi are typical print qualities, rather than the 72 dpi standard for websites. If you don't have control over this setting directly from whatever you're using to produce your images, a good rule of thumb is that you should aim to generate them 3 and a bit times larger on screen than you want them to be on paper.
+
+#### Can I just make it produce one section in the PDF?
+
+In the `Main.tex` file there are a list of `\include` statements. If you add an `\includeonly` statement to match those with one or more of the same labels, it'll just produce the content for those sections. (Labels, references, figures, and table numbers will be consistent as if you'd generated the whole document.)
+
+

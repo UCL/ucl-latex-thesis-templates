@@ -557,6 +557,17 @@
 }
 %    \end{macrocode}
 %  \end{environment}
+%  \begin{environment}{impact statement}
+%  An environment for the Impact Statement
+%    \begin{macrocode}
+\newcommand \@impactstatement{Impact Statement}
+\newenvironment{impactstatement}{%
+    \chapter*{\@impactstatement}%
+    \@mkboth{\@impactstatement}{\@impactstatement}%
+}{%
+}
+%    \end{macrocode}
+%  \end{environment}
 %  \Finale
 \endinput
 %%

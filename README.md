@@ -14,7 +14,11 @@ If you have suggestions for improvements, please do submit an issue, drop me a l
 
 ## Licensing
 
-This work may be distributed and/or modified under the conditions of the LaTeX Project Public License, either version 1.3 of this license or (at your option) any later version. The latest version of this license is in <http://www.latex-project.org/lppl.txt> and version 1.3 or later is part of all distributions of LaTeX version 2005/12/01 or later.
+This work was previously available to be distributed and/or modified under the conditions of the LaTeX Project Public License (>=1.3), however, I realised that that doesn't make a lot of sense for a template.
+
+Therefore, all files *except* `ucl_thesis.cls` are released into the public domain under CC-0-1.0, as described in the `COPYING` file.
+
+The classfile `ucl_thesis.cls` may be distributed and/or modified under the conditions of the LaTeX Project Public License, either version 1.3 of this license or (at your option) any later version. The latest version of this license is in <http://www.latex-project.org/lppl.txt> and version 1.3 or later is part of all distributions of LaTeX version 2005/12/01 or later.
 
 This work has the LPPL maintenance status `maintained'.
 

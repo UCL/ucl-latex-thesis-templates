@@ -1,7 +1,7 @@
 
-The following files are licensed under the LPPL as described in the README.md file that should have been distributed with this.
+The following files are licensed under the LPPL or released under CC0 terms as described in the README.md file that should have been distributed with this.
 
-The additional `.git-ignore` and `.travis.yaml` files in the original repository are released into the public domain under the Creative Commons CC0 1.0 Universal Public Domain Dedication. 
+Additionally, the `.git-ignore` and `.travis.yaml` files in the original repository are released into the public domain under the Creative Commons CC0 1.0 Universal Public Domain Dedication. 
 
 ```
 ucl-latex-thesis-templates

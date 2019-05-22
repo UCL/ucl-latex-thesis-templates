@@ -11,7 +11,7 @@
 %%   among other changes, significantly more documentation.
 %%
 %%  The definitive formatting reference is here:
-%%   http://www.ucl.ac.uk/current-students/research_degrees/thesis_formatting 
+%%   https://www.ucl.ac.uk/students/exams-and-assessments/research-assessments/format-bind-and-submit-your-thesis-general-guidance
 %%
 %%  Several quotes from that page are included at relevant points.
 %%

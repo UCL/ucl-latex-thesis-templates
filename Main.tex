@@ -105,14 +105,12 @@
 % You could separate these out into different files if you have
 %  particularly large appendices.
 
-% This line manually adds the Bibliography to the table of contents.
-% The fact that \include is the last thing before this ensures that it
-% is on a clear page, and adding it like this means that it doesn't
-% get a chapter or appendix number.
-\addcontentsline{toc}{chapter}{Bibliography}
-
-% Actually generates your bibliography.
+% Actually generates your bibliography. The fact that \include is 
+% the last thing before this ensures that it is on a clear page.
 \bibliography{example}
+% This line manually adds the Bibliography to the table of contents. 
+% Adding it like this means that it doesn't get a chapter or appendix number.
+\addcontentsline{toc}{chapter}{Bibliography}
 
 % All done. \o/
 \end{document}

@@ -320,7 +320,9 @@
 %%%  \chapter* call does not put the bibliography into the table of
 %%%  contents.
 %%%
-%%%    \addcontentsline{toc}{chapter}{\bibname}%
+%%% This line manually adds the Bibliography to the table of contents. 
+%%% Adding it like this means that it doesn't get a chapter or appendix number.
+    \addcontentsline{toc}{chapter}{\bibname}%
 %%%
     \list{\@biblabel{\arabic{enumiv}}}%
          {\settowidth \labelwidth{\@biblabel{#1}}%

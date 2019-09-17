@@ -518,23 +518,23 @@
 \renewcommand \section{\@startsection {section}{1}{\z@}%
                                       {-1ex \@plus -.4ex \@minus -.2ex}%
                                       {.6ex \@plus .1ex}%
-                                      {\reset@font \Large \bfseries}}
+                                      {\raggedright \reset@font \Large \bfseries}}
 \renewcommand \subsection{\@startsection{subsection}{2}{\z@}%
                                         {-.7ex\@plus -.3ex \@minus -.2ex}%
                                         {.4ex \@plus .1ex}%
-                                        {\reset@font \large \bfseries}}
+                                        {\raggedright \reset@font \large \bfseries}}
 \renewcommand \subsubsection{\@startsection{subsubsection}{3}{\z@}%
                                         {-.5ex\@plus -.2ex \@minus -.2ex}%
                                         {.3ex \@plus .1ex}%
-                                        {\reset@font \large}}
+                                        {\raggedright \reset@font \large}}
 \renewcommand \paragraph{\@startsection{paragraph}{4}{\z@}%
                                        {.5ex \@plus .1ex \@minus .2ex}%
                                        {-.2em}%
-                                       {\reset@font \normalsize \bfseries}}
+                                       {\raggedright \reset@font \normalsize \bfseries}}
 \renewcommand \subparagraph{\@startsection{subparagraph}{5}{\parindent}%
                                           {-.3ex \@plus .1ex \@minus .2ex}%
                                           {-.2em}%
-                                          {\reset@font \normalsize \bfseries}}
+                                          {\raggedright \reset@font \normalsize \bfseries}}
 \setcounter{secnumdepth}{2}
 %    \end{macrocode}
 %

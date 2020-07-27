@@ -450,7 +450,7 @@
     \ifthenelse{\boolean{useuclbanner}}{%
         % The magic numbers here assume the standard UCL A4 Header EPS file
         \vspace*{-100pt}%
-        \hspace*{-135pt}%
+        \hspace*{-134.5pt}%
         \includegraphics{\@uclbannerlocation}%
         \placetextbox{0.14}{0.899}{%
             \textcolor{white}{\large \bfseries \@department}\\%

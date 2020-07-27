@@ -120,3 +120,6 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
+
+# Don't store PDF in git
+Main.pdf

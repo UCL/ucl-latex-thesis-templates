@@ -6,9 +6,20 @@
 % \renewcommand {\@degree@string} {Master of Things}
 % \makeatother
 
+% Flags for content selection; 
+% They should be before calls to \maketitle, \makedeclaration etc.
+% If set to true, download EPS file from: https://imagestore.ucl.ac.uk/imagestore/start/ucl-banners/For%20PRINT?authrequest=1&https=1
+\setbool{useuclbanner}{false}
+\uclbannerlocation{images/ucl-banner-a4.eps}
+
 \title{A Thesis Title}
 \author{Author Name}
 \department{Department of Something}
+
+% You can use this for extra information after the boilerplate declaration.
+% Use the \\ macro for new lines. Can be useful if you have to declare
+% contributions on papers.
+\extradeclaration{}
 
 \maketitle
 \makedeclaration

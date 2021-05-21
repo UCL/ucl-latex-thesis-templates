@@ -26,8 +26,8 @@
 %%   in http://www.latex-project.org/lppl.txt and version 1.3 or later is part
 %%   of all distributions of LaTeX version 2005/12/01 or later.
 %%
-\def \fileversion{v1.6}
-\def \filedate{2014/08/12}
+\def \fileversion{v1.7}
+\def \filedate{2021/05/21}
 \def \docdate{\filedate}
 %
 %  \changes{v1.3}{1996/10/18}{}
@@ -35,6 +35,11 @@
 %  \changes{v1.4}{1998/04/02}{Discovered that there were changes needed to openbib processing
 %    consequent on the upgrade to \LaTeXe\ (1997/12/01).}
 %  
+%  \changes{v1.7}{2021/05/21}{Since 1.4: fixes margins, adds Impact Statement 
+%    environment, makes headers ragged-right, removes obsolete times package, 
+%    corrects some links. (See GitHub commits at UCL/ucl-latex-thesis-template
+%    for full change information.)}
+%
 %  \MakeShortVerb{\|}
 %
 %  \title{A \LaTeXe\ Class to Typeset UCL MRes, MPhil and PhD Theses}

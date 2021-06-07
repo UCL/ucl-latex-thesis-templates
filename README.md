@@ -52,6 +52,8 @@ If you're new to LaTeX, though, or want something to help you keep your files to
 
 TeXShop and TeXMaker are both oriented around helping you write plaintext .tex files, while LyX is more aimed at presenting a structured document with some of the formatting rendered, to make it a little less abstract to work with.
 
+If you want something quick that runs entirely through a browser, so you don't even have to set up your own LaTeX installation, UCL also has a subscription for [Overleaf](https://overleaf.com), a service that does that. You'll have to register using your UCL email address to use the subscription. It's also good for working with someone else on a document, with live shared editing.
+
 #### What is the Makefile for?
 
 If you're using this from the Linux command-line, the Makefile defines a few things to make it easier to build the LaTeX document. If not, you can happily ignore it.

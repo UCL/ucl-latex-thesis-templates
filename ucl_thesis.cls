@@ -26,8 +26,8 @@
 %%   in http://www.latex-project.org/lppl.txt and version 1.3 or later is part
 %%   of all distributions of LaTeX version 2005/12/01 or later.
 %%
-\def \fileversion{v1.7}
-\def \filedate{2021/05/21}
+\def \fileversion{v1.8}
+\def \filedate{2021/06/07}
 \def \docdate{\filedate}
 %
 %  \changes{v1.3}{1996/10/18}{}
@@ -39,6 +39,8 @@
 %    environment, makes headers ragged-right, removes obsolete times package, 
 %    corrects some links. (See GitHub commits at UCL/ucl-latex-thesis-template
 %    for full change information.)}
+%
+%  \changes{v1.8}{2021/06/07}{Since 1.7: resets the mathcal font to normal instead of mega-calligraphy.}
 %
 %  \MakeShortVerb{\|}
 %

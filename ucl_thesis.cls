@@ -161,7 +161,13 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
 \LoadClass{book}
+% This is the package that sets the fonts up as Times New Roman.
 \RequirePackage{mathptmx}
+% The mathptmx package makes a subset of the math glyphs (mathcal) extremely calligraphically loopy.
+% This sets sets the "alphabet" for \mathcal for the OMS encoding block, to the cmsy font, 
+%  m series (medium, I think), n weight, which is the ordinary default.
+% See issue #19 for some reference links and examples.
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
 %    \end{macrocode}
 %
 %  \subsection{Page Layout}

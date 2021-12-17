@@ -163,13 +163,19 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
 \LoadClass{book}
-% This is the package that sets the fonts up as Times New Roman.
+% This is the package that sets the fonts up as Helvetica/Arial per UCL requirement
+\RequirePackage[scaled]{helvet}
 \RequirePackage{mathptmx}
 % The mathptmx package makes a subset of the math glyphs (mathcal) extremely calligraphically loopy.
 % This sets sets the "alphabet" for \mathcal for the OMS encoding block, to the cmsy font, 
 %  m series (medium, I think), n weight, which is the ordinary default.
 % See issue #19 for some reference links and examples.
 \DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+% Used to select content
+\RequirePackage{ifthen}
+% Used for the text over the UCL Banner
+\RequirePackage{xcolor}
+\RequirePackage[pscoord]{eso-pic}
 %    \end{macrocode}
 %
 %  \subsection{Page Layout}
@@ -202,9 +208,9 @@
 %  \begin{macro}{\ps@headings}
 %  Define a new style so that all the standard styles are available.
 %    \begin{macrocode}
-\def \ps@headings{%
-    \def \@oddhead{\normalfont \rmfamily \slshape \hfill \rightmark \hfill \thepage}%
-    \def \@evenhead{\normalfont \rmfamily \slshape \thepage \hfill \leftmark \hfill}%
+    \def \ps@headings{%
+    \def \@oddhead{\normalfont \sffamily \slshape \hfill \rightmark \hfill \thepage}%
+    \def \@evenhead{\normalfont \sffamily \slshape \thepage \hfill \leftmark \hfill}%
     \let \@oddfoot = \@empty%
     \let \@evenfoot = \@empty%
     \let \@mkboth = \markboth%
@@ -413,6 +419,22 @@
 %    \begin{macrocode}
 \def\department#1{\gdef\@department{#1}}
 \def\@department{\@latex@warning@no@line{No \noexpand\department given}}
+%   Allows extra text after the boiler-plate declaration
+\def\extradeclaration#1{\gdef\@extradeclaration{#1}}
+%   Allows using the UCL eps A4 banners on the title page
+\def\uclbannerlocation#1{\gdef\@uclbannerlocation{#1}}
+\newboolean{useuclbanner}
+\setboolean{useuclbanner}{false}
+\ifthenelse{\boolean{useuclbanner}}%
+{\def\@uclbannerlocation{\@latex@warning@no@line{No \noexpand\uclbannerlocation given}}}{}
+%   Used to place the department and UCL over the UCL eps banner
+\newcommand{\placetextbox}[3]{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \setbox0=\hbox{#3}% Put <stuff> in a box
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(\LenToUnit{#1\paperwidth},\LenToUnit{#2\paperheight}){\vtop{{\null}\makebox[0pt][l]{\begin{tabular}{l}#3\end{tabular}}}}%
+  }%
+}
+%
 \renewcommand \maketitle{%
     \setcounter{page}{1}%
     \thispagestyle{empty}%
@@ -422,7 +444,8 @@
     \gdef \@address{}%
     \gdef \@thanks{}%
     %\gdef \@author{}%
-    \gdef \@department{}%
+    \ifthenelse{\boolean{useuclbanner}}{}{%
+    \gdef \@department{}}%
     \gdef \@title{}%
     \let \maketitle = \relax%
 }
@@ -433,6 +456,17 @@
 %    \begin{macrocode}
 \newcommand \@maketitle{%
     \newpage%
+    \null%
+    \ifthenelse{\boolean{useuclbanner}}{%
+        % The magic numbers here assume the standard UCL A4 Header EPS file
+        \vspace*{-100pt}%
+        \hspace*{-134.5pt}%
+        \includegraphics{\@uclbannerlocation}%
+        \placetextbox{0.14}{0.899}{%
+            \textcolor{white}{\large \bfseries \@department}\\%
+            \textcolor{white}{\large \bfseries University College London}%
+        }%
+    }{}%
     \null%
     \vspace*{5em}%
 %%%
@@ -476,9 +510,19 @@
 %    \begin{macrocode}
        \newcommand \makedeclaration {%
          \clearpage%
+         \thispagestyle{empty}%
          I, \@author , confirm that the work presented in this thesis is my own.
-         Where information has been derived from other sources, I confirm that this has been indicated in the work.
+         Where information has been derived from other sources, I confirm that
+         this has been indicated in the work. \@extradeclaration
+
+         \null
+         \vspace*{2em}
+         \noindent Date: \@date\\
+         Name: \@author\\
+         Signature: 
          \gdef \@author{}%
+         \ifthenelse{\boolean{useuclbanner}}{%
+         \gdef \@department{}}{}%
          \clearpage%
        }%
 %    \end{macrocode}

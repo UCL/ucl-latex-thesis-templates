@@ -1,4 +1,4 @@
-% These settings are from:
+% These settings are partly from:
 %  http://mintaka.sdsu.edu/GF/bibliog/latex/floats.html
 
 % They give LaTeX more options on where to put your figures, and may
@@ -19,7 +19,8 @@
 \setcounter{totalnumber}{4}     % 2 may work better
 \setcounter{dbltopnumber}{2}    % for 2-column pages
 \renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
-\renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+\renewcommand{\textfraction}{0.2}	% page must be at least 20% text, 
+%                                  less than that and we get a floatpage
 
 %   Parameters for FLOAT pages (not text pages):
 \renewcommand{\floatpagefraction}{0.7}	% require fuller float pages

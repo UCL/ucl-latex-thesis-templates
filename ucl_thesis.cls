@@ -26,8 +26,8 @@
 %%   in http://www.latex-project.org/lppl.txt and version 1.3 or later is part
 %%   of all distributions of LaTeX version 2005/12/01 or later.
 %%
-\def \fileversion{v1.6}
-\def \filedate{2014/08/12}
+\def \fileversion{v1.8}
+\def \filedate{2021/06/07}
 \def \docdate{\filedate}
 %
 %  \changes{v1.3}{1996/10/18}{}
@@ -35,6 +35,13 @@
 %  \changes{v1.4}{1998/04/02}{Discovered that there were changes needed to openbib processing
 %    consequent on the upgrade to \LaTeXe\ (1997/12/01).}
 %  
+%  \changes{v1.7}{2021/05/21}{Since 1.4: fixes margins, adds Impact Statement 
+%    environment, makes headers ragged-right, removes obsolete times package, 
+%    corrects some links. (See GitHub commits at UCL/ucl-latex-thesis-template
+%    for full change information.)}
+%
+%  \changes{v1.8}{2021/06/07}{Since 1.7: resets the mathcal font to normal instead of mega-calligraphy.}
+%
 %  \MakeShortVerb{\|}
 %
 %  \title{A \LaTeXe\ Class to Typeset UCL MRes, MPhil and PhD Theses}
@@ -156,10 +163,13 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
 \LoadClass{book}
-% UCL now requires Helvetica/Arial
+% This is the package that sets the fonts up as Helvetica/Arial per UCL requirement
 \RequirePackage[scaled]{helvet}
 \RequirePackage{mathptmx}
-% Reset maths to a more aesthetically pleasing alphabet
+% The mathptmx package makes a subset of the math glyphs (mathcal) extremely calligraphically loopy.
+% This sets sets the "alphabet" for \mathcal for the OMS encoding block, to the cmsy font, 
+%  m series (medium, I think), n weight, which is the ordinary default.
+% See issue #19 for some reference links and examples.
 \DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
 % Used to select content
 \RequirePackage{ifthen}

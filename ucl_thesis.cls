@@ -489,7 +489,30 @@
 %  Redefine the chapter and section commands in order to change the font of the section heads.
 %  Only include in contents and number down to subsections.
 %    \begin{macrocode}
+
+\renewcommand \part{%
+    \if@twocolumn%
+        \@restonecoltrue \onecolumn%
+    \else%
+        \@restonecolfalse%
+    \fi%
+    \if@openright%
+        \cleardoublepage%
+    \else%
+        \clearpage%
+    \fi
+    \thispagestyle{empty}%
+    \global \@topnum \z@%
+    \@afterindentfalse%
+    \secdef \@part \@spart%
+}
+
 \renewcommand \chapter{%
+    \if@twocolumn%
+        \@restonecolfalse%
+    \else%
+        \@restonecoltrue%
+    \fi%
     \if@openright%
         \cleardoublepage%
     \else%
